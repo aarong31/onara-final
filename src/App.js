@@ -36,7 +36,7 @@ const App = ({ checkUserSession, currentUser }) => {
       <Route  exact
             path='/signin'
             render={() =>
-              this.props.currentUser ? (
+              currentUser ? (
                 <Redirect to='/' />
               ) : (
                 <SignIn />
@@ -45,7 +45,7 @@ const App = ({ checkUserSession, currentUser }) => {
       <Route  exact
             path='/signup'
             render={() =>
-              this.props.currentUser ? (
+              currentUser ? (
                 <Redirect to='/' />
               ) : (
                 <SignUp />
