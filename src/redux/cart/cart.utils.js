@@ -28,8 +28,4 @@ export const removeItemFromCart = (cartItems, cartItemToRemove) => {
       ? { ...cartItem, quantity: cartItem.quantity - 1 }
       : cartItem
   );
-<<<<<<< HEAD
 };
-=======
-};
->>>>>>> e7cc91290d684807fbd191ab79e13516bc9437ad
