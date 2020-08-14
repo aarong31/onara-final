@@ -17,7 +17,7 @@ import CheckoutPage from './pages/checkout/checkout';
 
 import { selectCurrentUser } from './redux/user/user.selectors';
 import { checkUserSession } from './redux/user/user.actions';
-//sdsssss test
+//sdsssss
 
 
 const App = ({ checkUserSession, currentUser }) => {
