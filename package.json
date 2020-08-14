@@ -30,14 +30,12 @@
   "resolutions": {
     "babel-jest": "24.7.1"
   },
-  "scripts": {
-    "dev": "react-scripts start",
-    "start": "serve -s build",
+   "scripts": {
+    "start": "react-scripts start || serve -s build",
     "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject",
-    "heroku-postbuild": "npm run build"
-    },
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
   "eslintConfig": {
     "extends": "react-app"
   },
