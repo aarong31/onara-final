@@ -3,7 +3,7 @@ import { takeLatest, call, put, all } from 'redux-saga/effects';
 import {
   firestore,
   convertCollectionsSnapshotToMap
-} from '../../firebase/firebase.utils';
+} from '../../firebase-utils/firebase.utils';
 
 import {
   fetchCollectionsSuccess,
