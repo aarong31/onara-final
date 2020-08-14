@@ -16,7 +16,7 @@ import {
   googleProvider,
   createUserProfileDocument,
   getCurrentUser
-} from '../../firebase-utils/firebase.utils';
+} from '../../firebase/firebase.utils';
 
 export function* getSnapshotFromUserAuth(userAuth, additionalData) {
   try {
