@@ -10,6 +10,7 @@
 
 .menu-item {
     min-width: 30%;
+    width: 500px;
     height: 400px;
     flex: 1 1 auto;
     display: flex;
@@ -34,7 +35,11 @@
   
     &.large {
       height: 700px;
-      width: 600px;
+      width: 700px;
+      @media screen and (max-width: 800px) {
+        height: 400px;
+        width: 300px;
+      }
     }
     &:first-child {
       margin-right: 7.5px;
@@ -42,6 +47,9 @@
   
     &:last-child {
       margin-left: 7.5px;
+    }
+    @media screen and (max-width: 800px) {
+      height: 300px;
     }
   
     .background-image {
@@ -53,6 +61,10 @@
 
       &.positionT {
         background-position: center;
+      }
+      @media screen and (max-width: 800px) {
+        height: 400px;
+        background-position: 0px 0px;
       }
     }
   
