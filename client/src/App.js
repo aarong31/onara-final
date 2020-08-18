@@ -1,5 +1,5 @@
 
-import React, { useEffect } from 'react';
+import React, { useEffect, lazy, Suspense } from 'react';
 import { Switch, Route, Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
@@ -7,17 +7,19 @@ import { createStructuredSelector } from 'reselect';
 import './App.css';
 import './main.styles.scss';
 
-import HomePage from './pages/homepage/homepage';
-import ShopPage from './pages/shop/shop.js';
-import SignIn from './pages/signin/signin';
-import SignUp from './pages/signin/sign-up';
+import Spinner from './components/spinner/spinner';
+
 import Nav from './components/nav/nav';
 import Nav2 from './components/nav-two/nav-two';
-import CheckoutPage from './pages/checkout/checkout';
 
 import { selectCurrentUser } from './redux/user/user.selectors';
 import { checkUserSession } from './redux/user/user.actions';
-//sdssssss
+
+const HomePage = lazy(() => import( './pages/homepage/homepage'));
+const ShopPage = lazy(() => import('./pages/shop/shop.js'));
+const SignIn = lazy(() => import('./pages/signin/signin'));
+const SignUp = lazy(() => import('./pages/signin/sign-up'));
+const CheckoutPage = lazy(() => import('./pages/checkout/checkout'));
 
 
 const App = ({ checkUserSession, currentUser }) => {
@@ -30,6 +32,7 @@ const App = ({ checkUserSession, currentUser }) => {
     < Nav2 />
     < Nav />
     <Switch>
+    <Suspense fallback={<Spinner />}>
       <Route exact path='/' component={HomePage} />
       <Route path='/shop' component={ShopPage} />
       <Route exact path='/checkout' component={CheckoutPage} />
@@ -51,6 +54,7 @@ const App = ({ checkUserSession, currentUser }) => {
                 <SignUp />
               )
             }/>
+          </Suspense>
     </Switch>
   </div>
   );
