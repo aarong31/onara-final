@@ -35,24 +35,24 @@ const Nav = ({ currentUser, hidden, signOutStart }) => (
          </div>
            <div className="navbar-end pt-5 pr-6">
                <Link to="/shop">
-                    <div className="navbar-item subtitle has-text-black is-5 pt-4 navHover">
+                    <div className="navbar-item subtitle has-text-black is-5 pt-3 navHover">
                         Shop
                     </div>
                 </Link>
                 <Link to="/contact">
-                <div className="navbar-item subtitle has-text-black is-5 pt-4 navHover">
+                <div className="navbar-item subtitle has-text-black is-5 pt-3 navHover">
                         Contact
                     </div>
                 </Link>
                  {currentUser ? (
                     <Link to="">
-                        <div className='subtitle navbar-item has-text-black is-5 pt-4 navHover' onClick={signOutStart}>
+                        <div className='subtitle navbar-item has-text-black is-5 pt-3 navHover' onClick={signOutStart}>
                         SIGN OUT
                         </div>
                    </Link>
                  ) : (
                     <Link to="/signin">
-                        <div className="navbar-item subtitle has-text-black is-5 pt-4 navHover">
+                        <div className="navbar-item subtitle has-text-black is-5 pt-3 navHover">
                             Sign-In
                         </div>
                     </Link>

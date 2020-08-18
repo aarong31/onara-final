@@ -10,9 +10,9 @@ import { ReactComponent as ShoppingIcon } from '../../assets/shoppingbag.svg';
 import './cart-icon.scss';
 
 const CartIcon = ({ toggleCartHidden, itemCount }) => (
-  <div className='cart-icon pb-5' onClick={toggleCartHidden}>
+  <div className='cart-icon' onClick={toggleCartHidden}>
     <ShoppingIcon className='shopping-icon' />
-    <span className='item-count pb-3'>{itemCount}</span>
+    <span className='item-count'>{itemCount}</span>
   </div>
 );
 
