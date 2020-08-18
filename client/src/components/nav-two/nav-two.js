@@ -10,7 +10,7 @@ const Nav = () => (
                 FREE U.S SHIPPING ON ORDERS $60+! <span className=" shop pl-3">SHOP NOW</span>
                 </span>
                 <section className="subtitle has-text-danger">
-                Mobile responsiveness is still under construction! Current as of 8/20/20
+                Mobile responsiveness is still under construction! Current as of 8/2020
             </section>
             </Link> 
     </div>
