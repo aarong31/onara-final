@@ -7,6 +7,8 @@ import CustomButton from '../button/button';
 
 import { signUpStart } from '../../redux/user/user.actions';
 
+import './sign-up.scss';
+
 const SignUp = ({ signUpStart }) => {
   const [userCredentials, setUserCredentials] = useState({
     displayName: '',
@@ -35,7 +37,7 @@ const SignUp = ({ signUpStart }) => {
   }
   
     return (
-      <div className='section has-text-centered'>
+      <div className='section has-text-centered signUp'>
         <span className="subtitle is-4 has-text-black">Sign up with your email and password</span>
         <form className='sign-up-form pb-4' onSubmit={handleSubmit}>
           <FormInput
@@ -70,7 +72,7 @@ const SignUp = ({ signUpStart }) => {
             label='Confirm Password'
             required
           />
-        <CustomButton type='submit'>SIGN UP</CustomButton>
+        <CustomButton className="ct" type='submit'>SIGN UP</CustomButton>
         </form>
         <Link to="/signin">
           <div className="subtitle is-4 has-text-black accHover">I already have an account</div>

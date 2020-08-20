@@ -33,8 +33,8 @@ const SignIn = ({ emailSignInStart, googleSignInStart }) => {
     setCredentials({ ...userCredentials, [name]: value });
   };
     return (
-      <div className="section has-text-centered">
-      <div className='container pb-4'>
+      <div className="section has-text-centered signIn">
+      <div className='container'>
         <span className="subtitle is-5 has-text-black">Sign in with your email and password</span>
         <form onSubmit={handleSubmit}>
           <FormInput
@@ -53,10 +53,11 @@ const SignIn = ({ emailSignInStart, googleSignInStart }) => {
             label='password'
             required
           />
-          <span className="pr-2"><CustomButton type='submit'>Sign in </CustomButton></span>
-          <span className="pl-2"><CustomButton onClick={googleSignInStart}>
+         <CustomButton className="ct" type='submit'>Sign in </CustomButton>
+        <div className="pb-3"></div>
+         <CustomButton className="ctS" onClick={googleSignInStart}>
               Sign in with Google
-            </CustomButton></span>
+          </CustomButton>
         </form>
         </div>
         <Link to="/signup">

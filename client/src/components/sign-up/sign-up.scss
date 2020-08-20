@@ -1,3 +1,17 @@
 .accHover:hover {
     text-decoration: underline;
 }
+
+.ct{
+    -ms-transform: translateX(300%);
+    transform: translateX(300%);
+  }
+
+.signUp {
+    @media screen and (max-width: 800px) {
+      .ct{
+        -ms-transform: translateX(55%);
+        transform: translateX(55%);
+      }
+    }
+}

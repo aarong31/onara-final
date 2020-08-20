@@ -1,13 +1,29 @@
-.sign-in {
-    display: flex;
-    flex-direction: column;
-  }
 
   .accHover:hover {
       text-decoration: underline;
   }
 
-  .subtitle{
-    display: inline;
-    cursor: pointer;
+  .ct{
+    -ms-transform: translateX(300%);
+    transform: translateX(300%);
+
   }
+
+  .ctS {
+    -ms-transform: translateX(178%);
+    transform: translateX(178%);
+  }
+
+.signIn {
+  @media screen and (max-width: 800px) {
+    .ct{
+      -ms-transform: translateX(65%);
+      transform: translateX(65%);
+  
+    }
+    .ctS {
+      -ms-transform: translateX(25%);
+      transform: translateX(25%);
+    }
+  }
+}
