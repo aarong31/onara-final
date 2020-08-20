@@ -2,16 +2,17 @@
     text-decoration: underline;
 }
 
-.ct{
-    -ms-transform: translateX(300%);
-    transform: translateX(300%);
+.signP{
+    -ms-transform: translateX(510%);
+    transform: translateX(510%);
   }
 
 .signUp {
     @media screen and (max-width: 800px) {
-      .ct{
+      .signP{
         -ms-transform: translateX(55%);
         transform: translateX(55%);
+        
       }
     }
 }

@@ -4,14 +4,16 @@
   }
 
   .ct{
-    -ms-transform: translateX(300%);
-    transform: translateX(300%);
+    -ms-transform: translateX(350%);
+    transform: translateX(350%);
+    position: relative;
 
   }
 
   .ctS {
-    -ms-transform: translateX(178%);
-    transform: translateX(178%);
+    -ms-transform: translateX(210%);
+    transform: translateX(210%);
+    position: relative;
   }
 
 .signIn {
@@ -19,11 +21,12 @@
     .ct{
       -ms-transform: translateX(65%);
       transform: translateX(65%);
-  
+      position: relative;
     }
     .ctS {
       -ms-transform: translateX(25%);
       transform: translateX(25%);
+      position: relative;
     }
   }
 }

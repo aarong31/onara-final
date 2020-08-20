@@ -72,7 +72,7 @@ const SignUp = ({ signUpStart }) => {
             label='Confirm Password'
             required
           />
-        <CustomButton className="ct" type='submit'>SIGN UP</CustomButton>
+        <CustomButton className="signP" type='submit'>SIGN UP</CustomButton>
         </form>
         <Link to="/signin">
           <div className="subtitle is-4 has-text-black accHover">I already have an account</div>
