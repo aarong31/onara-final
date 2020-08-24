@@ -13,14 +13,18 @@ import { signOutStart } from '../../redux/user/user.actions';
 
 import './nav.scss'
 
-const Nav = ({ currentUser, hidden, signOutStart }) => (
-<nav className="navbar pl-6 pb-4 pt-3" role="navigation" aria-label="main navigation">
+const Nav = ({ currentUser, hidden, signOutStart }) => {
+  const [isActive, setisActive] = React.useState(false);
+  return(
+  <nav className="navbar pl-6 pb-4 pt-3" role="navigation" aria-label="main navigation">
          <div className="navbar-brand logo-container pl-6">
             <Link to="/">
                 <Logo className="logo"/>
             </Link>
-         <div
-           className={'navbar-burger'}
+         <div  onClick={() => {
+          setisActive(!isActive);
+        }}
+           className={`navbar-burger ${isActive ? "is-active" : ""}`}
            role="button" aria-label="menu" data-target="navmenu" >
            <span aria-hidden="true"></span>
            <span aria-hidden="true"></span>
@@ -29,7 +33,7 @@ const Nav = ({ currentUser, hidden, signOutStart }) => (
          </div>
          
          
-         <div id="navmenu" className={'navbar-menu pr-5'}>
+         <div id="navmenu" className={`navbar-menu pr-5 ${isActive ? "is-active" : ""}`}>
          <div className="navbar-start">
            
          </div>
@@ -62,7 +66,8 @@ const Nav = ({ currentUser, hidden, signOutStart }) => (
             {hidden ? null : <CartDropdown />}
         </div>
     </nav>
-)
+  );
+}
 
 const mapStateToProps = createStructuredSelector({
     currentUser: selectCurrentUser,
