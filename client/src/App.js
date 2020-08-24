@@ -20,6 +20,7 @@ const ShopPage = lazy(() => import('./pages/shop/shop.js'));
 const SignIn = lazy(() => import('./pages/signin/signin'));
 const SignUp = lazy(() => import('./pages/signin/sign-up'));
 const CheckoutPage = lazy(() => import('./pages/checkout/checkout'));
+const Contact = lazy(() => import('./pages/contact/contact'));
 
 
 const App = ({ checkUserSession, currentUser }) => {
@@ -35,6 +36,7 @@ const App = ({ checkUserSession, currentUser }) => {
     <Suspense fallback={<Spinner />}>
       <Route exact path='/' component={HomePage} />
       <Route path='/shop' component={ShopPage} />
+      <Route path='/contact' component={Contact} />
       <Route exact path='/checkout' component={CheckoutPage} />
       <Route  exact
             path='/signin'
