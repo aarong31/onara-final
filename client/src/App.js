@@ -14,6 +14,7 @@ import Nav2 from './components/nav-two/nav-two';
 
 import { selectCurrentUser } from './redux/user/user.selectors';
 import { checkUserSession } from './redux/user/user.actions';
+//ddsssssss
 
 const HomePage = lazy(() => import( './pages/homepage/homepage'));
 const ShopPage = lazy(() => import('./pages/shop/shop.js'));
